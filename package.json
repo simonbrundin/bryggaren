@@ -1,0 +1,19 @@
+{
+  "name": "bryggaren",
+  "version": "1.0.0",
+  "description": "Min bryggapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonbrundin/bryggaren.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonbrundin/bryggaren/issues"
+  },
+  "homepage": "https://github.com/simonbrundin/bryggaren#readme"
+}
