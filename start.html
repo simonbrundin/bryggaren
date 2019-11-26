@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="start.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,400,600,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/75d672b7ec.js"></script>
+  </head>
+  <body>
+    <!-- Meny -->
+    <nav id="meny">
+      <i id="pios-icon" class="fas fa-toggle-off"></i>
+      <p id="logga">Haga Bryggeri</p>
+      <i id="info-icon" class="fas fa-info-circle"></i>
+    </nav>
+    <!-- Startinställningar -->
+    <div id="start-settings">
+      <!-- Progress Bar -->
+      <div id="progress-bar">
+        <div id="progress-background">
+          <div id="progress"></div>
+        </div>
+        <div id="step-bar">
+          <i class="fas fa-beer" id="step-1"></i>
+          <i class="fas fa-wine-bottle" id="step-2"></i>
+          <i class="fas fa-list-ul" id="step-3"></i>
+        </div>
+      </div>
+
+      <!--Steg: Välj recept -->
+      <div id="step-choose-recipe">
+        <select id="recept-dropdown">
+          <option selected disabled value="0">välj recept...</option>
+          <option value="hagaIPA">Haga IPA</option>
+          <option value="riddarbira">Riddarbira</option>
+          <option value="3">Nytt recept...</option>
+        </select>
+      </div>
+
+      <!--Steg: Flaskad öl -->
+      <div id="step-bottled-beer">
+        <!-- <h1>Flaskad öl</h1> -->
+        <div id="bottled-liters-circle">
+          <i class="fas fa-angle-up" id="mer"></i>
+          <div>
+            <span id="bottled-liters-nr">0</span>
+            <span id="bottled-liters-text">l</span>
+          </div>
+          <i class="fas fa-angle-down" id="mindre"></i>
+        </div>
+      </div>
+
+      <!-- Steg: Ingredienser -->
+      <div id="step-ingredients">
+        <h3>Ingredienser:</h3>
+        <ul id="ingredienser"></ul>
+      </div>
+
+      <!-- Nästa steg knapp -->
+      <button type="submit" id="next-button">
+        <div>Välj recept</div>
+        <i class="fas fa-caret-up fa-2x"></i>
+      </button>
+
+      <!-- Data som skickas vidare -->
+      <div id="brew-settings" class="off">
+        <p>Receptnamn</p>
+        <input type="text" value="namn" id="s-name" />
+        <p>Flaskad öl</p>
+        <input type="text" value="liter" id="s-chosen-liters" />
+        <p>Malt</p>
+        <input type="text" value="malt" id="s-fermentables" />
+        <p>Mäskschema</p>
+        <input type="text" value="mäsk-schema" id="s-mash-steps" />
+        <p>Lakning</p>
+        <input type="text" value="lakning" id="s-lautering" />
+        <p>Koktid</p>
+        <input type="text" value="minuter" id="s-boil-time" />
+        <p>Humlingsschema</p>
+        <input type="text" value="humle" id="s-hops" />
+        <p>Jäst</p>
+        <input type="text" value="yeast" id="s-yeast" />
+      </div>
+    </div>
+    <!-- Under bryggningen -->
+    <div id="under-bryggning">
+      <!-- Receptrubrik -->
+      <p class="subheading">Brygger</p>
+      <div id="recept-rubrik">Receptnamn</div>
+
+      <!-- Tid kvar -->
+      <div id="tid-kvar">
+        <div class="tid-ruta">
+          <p class="subheading">Tid kvar</p>
+          <p class="remaining-time">4:30</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-bakgrund">
+          <div id="progress-bar-total-filled"></div>
+        </div>
+      </div>
+      <!-- Nuvarande steg -->
+      <div id="steg">
+        <div class="tid-ruta" id="steg-ruta">
+          <p class="subheading">Nuvarande steg</p>
+          <p id="status-rubrik"></p>
+        </div>
+      </div>
+
+
+
+
+
+
+      <!-- <svg  xmlns="http://www.w3.org/2000/svg" height="200" width="200" viewBox="0 0 200 200" data-value="50">
+  <path class="bg" stroke="#ccc" d="M41 149.5a77 77 0 1 1 117.93 0"  fill="none"/>
+  <path class="meter" stroke="#09c" d="M41 149.5a77 77 0 1 1 117.93 0" fill="none" stroke-dasharray="350" stroke-dashoffset="350"/>
+</svg> -->
+
+
+
+
+
+     <!-- Temperatur
+      <div id="temperatur">
+        Temp Cirkel
+        <div id="temperatur-cirkel">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewbox="0 0 100 100"
+            id="cirkel"
+          >
+            <path
+              class="bakgrund"
+              d="M44 10
+             A16 16, 0, 1 0, 56 10"
+              style="fill:none;"
+            />
+            <path
+              class="fyllning"
+              d="M56 10
+             A16 16, 0, 1 1, 44 10"
+              style="fill:none;"
+            />
+          </svg>
+        </div>
+        <div id="goal-temp">
+          <p class="subheading">mål</p>
+          <div>
+            <span class="nr">72</span>
+            <span class="grader">°</span>
+          </div>
+        </div>
+        <div id="now-temp">
+          <p class="subheading">temperatur</p>
+          <div>
+            <span class="nr">72</span>
+            <span class="grader">°</span>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Relän i Arduino -->
+      <div>
+        <!-- Knappar -->
+        <div id="rubrik-knappar">
+          <i class="fas fa-caret-left" id="last-phase"></i>
+
+          <input type="button" value="Reset" id="reset-button" />
+          <i class="fas fa-caret-right" id="next-phase"></i>
+        </div>
+
+        <table id="relays">
+          <tr>
+            <td><div class="relay" id="r-kokplatta"></div></td>
+            <td class="relay-description">Kokplatta</td>
+            <td><div class="relay" id="r-hlt-element"></div></td>
+            <td class="relay-description">HLT-element</td>
+          </tr>
+          <tr>
+            <td><div class="relay" id="r-ventil-1"></div></td>
+            <td class="relay-description">Ventil 1</td>
+            <td><div class="relay" id="r-pump-1"></div></td>
+            <td class="relay-description">Pump 1</td>
+          </tr>
+          <tr>
+            <td><div class="relay" id="r-ventil-2"></div></td>
+            <td class="relay-description">Ventil 2</td>
+            <td><div class="relay" id="r-pump-2"></div></td>
+            <td class="relay-description">Pump 2</td>
+          </tr>
+          <tr>
+            <td><div class="relay" id="r-ventil-3"></div></td>
+            <td class="relay-description">Ventil 3</td>
+            <td><div class="relay" id="r-tw-g"></div></td>
+            <td class="relay-description">Grönt</td>
+          </tr>
+          <tr>
+            <td><div class="relay" id="r-ventil-4"></div></td>
+            <td class="relay-description">Ventil 4</td>
+            <td><div class="relay" id="r-tw-o"></div></td>
+            <td class="relay-description">Orange</td>
+          </tr>
+          <tr>
+            <td><div class="relay" id="r-ventil-5"></div></td>
+            <td class="relay-description">Ventil 5</td>
+            <td><div class="relay" id="r-tw-r"></div></td>
+            <td class="relay-description">Röd</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="recept.js"></script>
+    <script src="start.js"></script>
+  </body>
+</html>

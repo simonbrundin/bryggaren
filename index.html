@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bryggaren 1.0</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,400,600,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/75d672b7ec.js"></script>
+  </head>
+  <body>
+    <!-- Meny -->
+    <nav id="meny">
+      <a id="setting-icon" href="start.html"><i class="fas fa-cog"></i></a
+      ><a href="index.html" id="logga">Haga Bryggeri</a>
+      <i id="pios-icon" class="fas fa-toggle-off"></i>
+    </nav>
+
+    
+      <!-- Receptrubrik & tid kvar -->
+      <div id="recept-bar" class="bar">
+        <div id="recept-rubrik" class="full-width">PH</div>
+        <p id="remaining-time-total">4:30</p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="full-width progress-bar-bakgrund">
+        <div id="progress-bar-total-filled" class="full-width"></div>
+      </div>
+
+      <!-- Statustext -->
+      <div id="phase-b" class="bar">
+        <div id="status">
+          <i class="fas fa-caret-left" id="last-phase"></i>
+          <p id="status-rubrik"></p>
+          <i class="fas fa-caret-right" id="next-phase"></i>
+        </div>
+        <p id="remaining-time">4:30</p>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="full-width progress-bar-bakgrund">
+        <div id="progress-bar-phase-filled" class="full-width"></div>
+      </div>
+
+      <!-- Temperatur -->
+      <div id="temperatur">
+        <div class="temperatur-text"></div>
+        <span class="temperatur-nr">
+          72 <span class="temperatur-grader">°c</span>
+        </span>
+      </div>
+
+    
+
+      <!-- Progress Cirkel -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-1 -1 34 34"
+        id="progress-ring-total"
+      >
+        <circle cx="16" cy="16" r="16" class="progress-bar-background" />
+
+        <circle cx="16" cy="16" r="16" id="progress-bar-total-progress" />
+        <circle cx="16" cy="16" r="13" class="progress-bar-background" />
+        <circle cx="16" cy="16" r="13" id="progress-bar-phase-progress" />
+      </svg>
+
+      <!-- Relän i Arduino -->
+      <!-- Knappar -->
+      <div id="rubrik-knappar">
+        <input type="button" value="Nästa steg" id="step-button" />
+        <input type="button" value="Starta timer" id="timer-button" />
+        <input type="button" value="Reset" id="reset-button" />
+      </div>
+
+      <table id="relays">
+        <tr>
+          <td><div class="relay" id="r-kokplatta"></div></td>
+          <td class="relay-description">Kokplatta</td>
+          <td><div class="relay" id="r-hlt-element"></div></td>
+          <td class="relay-description">HLT-element</td>
+        </tr>
+        <tr>
+          <td><div class="relay" id="r-ventil-1"></div></td>
+          <td class="relay-description">Ventil 1</td>
+          <td><div class="relay" id="r-pump-1"></div></td>
+          <td class="relay-description">Pump 1</td>
+        </tr>
+        <tr>
+          <td><div class="relay" id="r-ventil-2"></div></td>
+          <td class="relay-description">Ventil 2</td>
+          <td><div class="relay" id="r-pump-2"></div></td>
+          <td class="relay-description">Pump 2</td>
+        </tr>
+        <tr>
+          <td><div class="relay" id="r-ventil-3"></div></td>
+          <td class="relay-description">Ventil 3</td>
+          <td><div class="relay" id="r-tw-g"></div></td>
+          <td class="relay-description">Grönt</td>
+        </tr>
+        <tr>
+          <td><div class="relay" id="r-ventil-4"></div></td>
+          <td class="relay-description">Ventil 4</td>
+          <td><div class="relay" id="r-tw-o"></div></td>
+          <td class="relay-description">Orange</td>
+        </tr>
+        <tr>
+          <td><div class="relay" id="r-ventil-5"></div></td>
+          <td class="relay-description">Ventil 5</td>
+          <td><div class="relay" id="r-tw-r"></div></td>
+          <td class="relay-description">Röd</td>
+        </tr>
+      </table>
+    
+    <script src="recept.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

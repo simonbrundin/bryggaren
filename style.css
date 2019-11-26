@@ -1,0 +1,211 @@
+body {
+  background: #585b66;
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: whitesmoke;
+  margin: 0px;
+}
+
+#meny {
+  padding: 20px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #24252a;
+}
+
+/* Inställningsikon */
+
+#setting-icon {
+  text-decoration: none;
+
+  color: #fdc500;
+}
+
+/* Logga */
+
+#logga {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/* Receptbar */
+
+.bar {
+  background: #33343b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  height: 30px;
+}
+
+
+
+#remaining-time {
+  justify-self: flex-end;
+}
+
+/* Progress Bar */
+
+.progress-bar-bakgrund {
+  background: #fff;
+  width: 100%;
+  height: 5px;
+  border-radius: 0;
+}
+
+#progress-bar-total-filled {
+  background: #fdc500;
+  width: 40%;
+  height: 100%;
+  border-radius: 0;
+}
+#progress-bar-phase-filled {
+  background: #fdc500;
+  width: 70%;
+  height: 100%;
+  border-radius: 0;
+}
+
+/* Bryggfas - Text */
+#status-text {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 13px;
+  margin: 0px;
+  text-align: center;
+}
+
+#status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#status-rubrik {
+  margin: 0px 20px;
+}
+
+/* Temperatur */
+
+#temperatur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: 4px whitesmoke;
+}
+
+/* Nu */
+.temperatur-nu-text {
+  text-transform: uppercase;
+}
+
+.temperatur-nr {
+  display: flex;
+  align-items: center;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.temperatur-grader {
+  font-weight: 100;
+  font-size: 14px;
+  margin: -15px 0 0 8px;
+  font-weight:400;
+  text-transform: uppercase;
+
+}
+
+#testbar {
+  border: 2px #101419;
+  height: 100px;
+}
+
+
+
+
+
+
+/* Knappar */
+
+#rubrik-knappar {
+  display: none;
+  justify-content: center;
+  margin: 20px 0px 0px 0px;
+}
+
+#timer-button {
+  display: none;
+}
+
+/* Relän */
+
+#relays-text {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+}
+
+#relays {
+  display: none;
+  list-style-type: none;
+  margin: 60px 0px 0px 0px;
+}
+
+.relay {
+  background: #33343b;
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+  margin: 0px 0px 10px 20px;
+}
+
+.relay.on {
+  background: #fdc500;
+}
+
+.relay-description {
+  position: relative;
+  left: 10px;
+  bottom: 5px;
+}
+
+#progress-ring-total {
+  height: 80vw;
+  transform: rotate(-90deg);
+  width: 100%;
+  display: none;
+}
+
+.progress-bar-background {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+}
+
+#progress-bar-total-progress {
+  fill: none;
+  stroke: #fff;
+  stroke: #fdc500;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+#progress-bar-phase-progress {
+  fill: none;
+  stroke: #fff;
+  stroke: #fdc500;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  stroke-width: 2;
+}

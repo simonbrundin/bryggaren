@@ -1,0 +1,497 @@
+body {
+  background: #ffffff;
+  font-family: "Montserrat";
+  color: #272727;
+  text-align: center;
+  margin: 0;
+}
+
+/* Fonter */
+
+h1 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Meny ------------------------------------------*/
+
+#meny {
+  padding: 20px 20px;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+}
+
+
+/* Logga */
+
+#logga {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #272727;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* Nästaknappen */
+
+#next-button {
+  outline: none;
+  margin: 0 auto 40px;
+  display: flex;
+  background: #ee3d49ec;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 12px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 100em;
+  padding: 10px 30px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+#next-button i {
+  padding-left: 10px;
+  justify-content: center;
+}
+#next-button.knapp-redo {
+  background: #00cf91;
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+  -webkit-animation: bounce 1s infinite;
+  -moz-animation: bounce 1s infinite;
+  -o-animation: bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+  }
+}
+@-o-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -o-transform: translateY(0);
+  }
+  40% {
+    -o-transform: translateY(-30px);
+  }
+  60% {
+    -o-transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+/* Progress Bar ----------------------------------*/
+
+#progress-bar {
+  margin: 20px 0px 40px 0px;
+}
+
+#step-bar {
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+  margin: -23px 0px 0px 0px;
+}
+
+#step-bar i {
+  background: white;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 100em;
+}
+
+
+
+#progress-background {
+  width: 66%;
+  height: 10px;
+  background: #333;
+  margin: auto;
+  border-radius: 100em;
+}
+
+#progress {
+  border-radius: 100em;
+  background: #00cf91;
+  width: 0%;
+  height: 100%;
+}
+
+#step-bar i.klart-steg {
+  border: 1px solid #00cf91;
+  color: #00cf91;
+}
+
+/* Steg - Välj recept ---------------------------*/
+
+select#recept-dropdown {
+  background: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 100em;
+  margin: 0px 0px 40px 0px;
+  padding: 15px 50px;
+  color: #333;
+  font-size: 14px;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-weight: 500;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+
+  outline: 0;
+  cursor: pointer;
+}
+
+/* Steg - Flaskad öl -----------------------------*/
+
+#step-bottled-beer {
+  display: none;
+}
+
+#bottled-liters-circle {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  margin: 40px auto;
+  background: white;
+  color: #24252a;
+  height: 90px;
+  width: 120px;
+  border-radius: 100em;
+  padding: 15px 0px;
+  font-size: 32px;
+  font-weight: 700;
+  box-shadow: 0px 0px 64px -19px rgba(0, 0, 0, 0.75);
+}
+
+#bottled-liters-circle i {
+  font-size: 16px;
+}
+
+#bottled-liters-circle-text {
+  margin: 0 5px;
+}
+
+#mer-mindre-knappar {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  text-align: center;
+  margin: 0 0px;
+}
+
+/* Steg - Ingredienser ---------------------------- */
+
+#step-ingredients {
+  display: none;
+}
+
+#ingredienser {
+  padding: 0;
+  margin: 40px auto;
+}
+
+#ingredienser li {
+  list-style: none;
+  margin: 15px auto;
+
+}
+
+.bought {
+  text-decoration: line-through;
+}
+
+/* Data som skickas vidare -------------------------*/
+
+#brew-settings.off {
+  display: none;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+
+/* Under Bryggning Sektion */
+
+#recept-rubrik {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+
+/* Tid kvar */
+
+#tid-kvar {
+  background: #00cf91;
+  height: 55px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  
+}
+
+.tid-ruta {
+  display: inline-block;
+  border: 1px solid #333;
+  padding: 5px 20px;
+  margin: 5px 0px 0px 0px;
+  border-radius: 100em;
+  background: white;
+}
+
+.subheading {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin: 0;
+}
+
+.remaining-time {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.progress-bar-bakgrund {
+  background: #333;
+  height: 5px;
+  margin: -25px 0px 20px 0px;
+}
+
+#progress-bar-total-filled {
+  background: #ee3d49ec;
+  width: 20%;
+  height: 100%;
+}
+
+
+
+
+/* Bryggfas - Text */
+
+#steg {
+  display: block;
+}
+
+#steg-ruta {
+  margin: 40px 0px 10px 0px;
+}
+
+
+#status-rubrik {
+  margin: 0px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Temperatur */
+
+#temperatur {
+  
+}
+
+#goal-temp  {
+  margin: -303px 0px 10px 0px;
+}
+
+#goal-temp div {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#goal-temp .subheading {
+  font-size: 8px;
+}
+
+#goal-temp .nr {
+  font-size: 14px;
+}
+#goal-temp .grader {
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+#now-temp div {
+  display:flex;
+  justify-content: center;
+  align-items: top;
+}
+
+#now-temp .subheading {
+  font-size: 8px;
+}
+
+#now-temp .nr {
+  font-size: 40px;
+  font-weight: 600;
+}
+#now-temp .grader {
+  font-size: 20px;
+  margin: 8px 0px 0px 2px;;
+}
+
+
+
+
+
+
+/* Knappar */
+
+#rubrik-knappar {
+  display: none;
+  justify-content: center;
+  margin: 20px 0px 0px 0px;
+}
+
+#reset-button {
+  margin: 0px 20px;
+}
+
+/* Relän */
+
+#relays-text {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+}
+
+#relays {
+  display: none;
+  list-style-type: none;
+  margin: 60px 0px 0px 0px;
+}
+
+.relay {
+  background: #33343b;
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+  margin: 0px 0px 10px 20px;
+}
+
+.relay.on {
+  background: #fdc500;
+}
+
+.relay-description {
+  position: relative;
+  left: 10px;
+  bottom: 5px;
+}
+
+#progress-ring-total {
+  height: 80vw;
+  transform: rotate(-90deg);
+  width: 100%;
+  display: none;
+}
+
+.progress-bar-background {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1;
+}
+
+#progress-bar-total-progress {
+  fill: none;
+  stroke: #fff;
+  stroke: #fdc500;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+#progress-bar-phase-progress {
+  fill: none;
+  stroke: #fff;
+  stroke: #fdc500;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#cirkel {
+ 
+}
+
+path {
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+
+#cirkel .bakgrund {
+  stroke: #333;
+}
+
+#cirkel .fyllning {
+  stroke: #ee3d49ec;
+  stroke-dasharray: 100, 200;
+  stroke-dashoffset: 50;
+  /* adjust last number for variance */
+}
+
+
+
+
+
+
+svg path {
+  will-change: auto;
+  stroke-width: 20px;
+  stroke-miterlimit: round;
+  transition: stroke-dashoffset 850ms ease-in-out;
+}
